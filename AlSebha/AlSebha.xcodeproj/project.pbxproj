@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2840FD21873D3A002491E2 /* AppDelegate.swift */; };
-		7E28410021873D3A002491E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2840FF21873D3A002491E2 /* ViewController.swift */; };
+		7E28410021873D3A002491E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2840FF21873D3A002491E2 /* HomeViewController.swift */; };
 		7E28410321873D3B002491E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E28410121873D3B002491E2 /* Main.storyboard */; };
 		7E28410621873D3B002491E2 /* AlSebha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E28410421873D3B002491E2 /* AlSebha.xcdatamodeld */; };
 		7E28410821873D41002491E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E28410721873D41002491E2 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		7E2840FA21873D3A002491E2 /* AlSebha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlSebha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2840FD21873D3A002491E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E2840FF21873D3A002491E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E2840FF21873D3A002491E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E28410221873D3B002491E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E28410521873D3B002491E2 /* AlSebha.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlSebha.xcdatamodel; sourceTree = "<group>"; };
 		7E28410721873D41002491E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				7E2840FD21873D3A002491E2 /* AppDelegate.swift */,
-				7E2840FF21873D3A002491E2 /* ViewController.swift */,
+				7E2840FF21873D3A002491E2 /* HomeViewController.swift */,
 				7E28410121873D3B002491E2 /* Main.storyboard */,
 				7E28410721873D41002491E2 /* Assets.xcassets */,
 				7E28410921873D41002491E2 /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E28410021873D3A002491E2 /* ViewController.swift in Sources */,
+				7E28410021873D3A002491E2 /* HomeViewController.swift in Sources */,
 				7E28410621873D3B002491E2 /* AlSebha.xcdatamodeld in Sources */,
 				7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */,
 			);
