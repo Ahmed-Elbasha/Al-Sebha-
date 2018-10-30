@@ -13,6 +13,7 @@ class AddZekrFirstPartViewController: UIViewController {
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var zekrNameTextView: UITextView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var addZekrLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
