@@ -18,26 +18,45 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var azkarTableView: UITableView!
     @IBOutlet weak var tasbehCountLabel: UILabel!
     
+    let azkar = [Zekr]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         let cyanColor = sabbehButton.currentTitleColor
         sabbehButton.layer.cornerRadius = 5
         sabbehButton.layer.borderColor = cyanColor.cgColor
         sabbehButton.layer.borderWidth = 1
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        checkTheCountOfRowsInTableView()
+    }
+    
+    func checkTheCountOfRowsInTableView() {
+        if azkar.count == 0 {
+            azkarTableView.isHidden = true
+            emptyStateView.isHidden = false
+            emptyStateLabel.isHidden = false
+        } else {
+            azkarTableView.reloadData()
+            azkarTableView.isHidden = false
+            emptyStateView.isHidden = true
+            emptyStateLabel.isHidden = true
+        }
     }
     
     @IBAction func addZekrButtonPressed(_ sender: Any) {
-        print("addZekrButtonPressed")
+        let addZekrFirstPartVC = storyboard?.instantiateViewController(withIdentifier: "AddZekrFirstPart")
+        self.present(addZekrFirstPartVC!, animated: true, completion: nil)
     }
     
     @IBAction func languageButtonPressed(_ sender: Any) {
-        print("languageButtonPressed")
     }
     
     @IBAction func sabbehButtonPressed(_ sender: Any) {
-        print("sabbehButtonPressed")
     }
 }
 

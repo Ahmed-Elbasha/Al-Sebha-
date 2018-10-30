@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="292"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no zekr in the current time press + to add new zekr" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdX-uI-jAH">
-                                                <rect key="frame" x="16" y="136" width="343" height="36"/>
+                                                <rect key="frame" x="20" y="136" width="335" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -105,8 +105,8 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="kdX-uI-jAH" secondAttribute="trailing" constant="16" id="3h8-IV-9dK"/>
-                                            <constraint firstItem="kdX-uI-jAH" firstAttribute="leading" secondItem="aZQ-Y3-tJs" secondAttribute="leading" constant="16" id="7Zq-zP-8Al"/>
+                                            <constraint firstAttribute="trailing" secondItem="kdX-uI-jAH" secondAttribute="trailing" constant="20" id="3h8-IV-9dK"/>
+                                            <constraint firstItem="kdX-uI-jAH" firstAttribute="leading" secondItem="aZQ-Y3-tJs" secondAttribute="leading" constant="20" id="7Zq-zP-8Al"/>
                                             <constraint firstItem="kdX-uI-jAH" firstAttribute="centerX" secondItem="aZQ-Y3-tJs" secondAttribute="centerX" id="JdQ-Sy-kB7"/>
                                             <constraint firstItem="kdX-uI-jAH" firstAttribute="centerY" secondItem="aZQ-Y3-tJs" secondAttribute="centerY" constant="8" id="VvM-7Q-0QF"/>
                                         </constraints>
