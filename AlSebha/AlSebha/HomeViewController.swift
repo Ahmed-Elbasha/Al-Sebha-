@@ -19,6 +19,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tasbehCountLabel: UILabel!
     
     let azkar = [Zekr]()
+    var isArabic = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,6 +56,41 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func languageButtonPressed(_ sender: Any) {
+        // Gets the current title of languageButton.
+        let currentlanguageButtonTitle = languageButton.currentTitle
+        
+        if currentlanguageButtonTitle == "عربي" && isArabic == false {
+            // Set localization for sabbehButton
+            sabbehButton.setTitle("سبح", for: .normal)
+            sabbehButton.setTitle("سبح", for: .highlighted)
+            
+            // Set localization for languageButton
+            languageButton.setTitle("English", for: .normal)
+            languageButton.setTitle("English", for: .highlighted)
+            
+            // Set localization for emptyStateLabel
+            emptyStateLabel.text = "لايوجد ذكر في الوقت الحالي اضغط + لآضافة ذكر جديد"
+            emptyStateLabel.textAlignment = .right
+            isArabic = true
+        } else if currentlanguageButtonTitle == "English" && isArabic == true {
+            // Set localization for sabbehButton
+            sabbehButton.setTitle("Sabbeh", for: .normal)
+            sabbehButton.setTitle("Sabbeh", for: .highlighted)
+            
+            // Set localization for languageButton
+            languageButton.setTitle("عربي", for: .normal)
+            languageButton.setTitle("عربي", for: .highlighted)
+            
+            // Set localization for emptyStateLabel
+            emptyStateLabel.text = "There is no zekr in the current time press + to add new zekr"
+            emptyStateLabel.textAlignment = .left
+            
+            // Change isArabic value
+            isArabic = false
+        }
+        
+        // reload Azkar TableView Data.
+        azkarTableView.reloadData()
     }
     
     @IBAction func sabbehButtonPressed(_ sender: Any) {
