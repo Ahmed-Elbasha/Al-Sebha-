@@ -36,6 +36,10 @@
                                         <state key="normal" image="addbutton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addZekrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9C3-IO-RdA"/>
+                                            <segue destination="ssy-xw-zWX" kind="presentation" id="X8V-1Y-rRC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hO-qk-qer">
                                         <rect key="frame" x="247" y="11" width="68" height="35"/>
@@ -47,6 +51,9 @@
                                         <state key="normal" title="عربي">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="languageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HDU-DX-AhE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -139,6 +146,9 @@
                                         <state key="normal" title="   Sabbeh   ">
                                             <color key="titleColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sabbehButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBM-px-f3d"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by Ahmed Elbasha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOT-mx-4Yf">
                                         <rect key="frame" x="128.5" y="295" width="118" height="10"/>
@@ -175,12 +185,32 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="azkarTableView" destination="aGV-Of-bTw" id="n2d-Kq-e5b"/>
+                        <outlet property="emptyStateLabel" destination="kdX-uI-jAH" id="PRs-hR-75s"/>
+                        <outlet property="emptyStateView" destination="aZQ-Y3-tJs" id="THp-tT-QnZ"/>
+                        <outlet property="languageButton" destination="6hO-qk-qer" id="WbI-Gi-TaX"/>
                         <outlet property="sabbehButton" destination="CG4-pE-pgR" id="Q6s-z9-QAF"/>
+                        <outlet property="tasbehCountLabel" destination="YkI-Y3-v57" id="qea-rT-soU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jYu-m2-8KC">
+            <objects>
+                <viewController id="ssy-xw-zWX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sp4-Ii-ekn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZeX-A8-HRV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PGs-y1-WwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="27"/>
         </scene>
     </scenes>
     <resources>
