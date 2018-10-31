@@ -38,7 +38,6 @@
                                         </state>
                                         <connections>
                                             <action selector="addZekrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9C3-IO-RdA"/>
-                                            <segue destination="ssy-xw-zWX" kind="presentation" id="X8V-1Y-rRC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hO-qk-qer">

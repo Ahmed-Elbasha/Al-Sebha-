@@ -15,6 +15,7 @@
 		7E28410B21873D41002491E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E28410921873D41002491E2 /* LaunchScreen.storyboard */; };
 		7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */; };
 		7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */; };
+		7ECEC3EC2189D4A300B09D00 /* AddZekrFirstPartTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEC3EB2189D4A200B09D00 /* AddZekrFirstPartTextViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7E28410C21873D41002491E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartViewController.swift; sourceTree = "<group>"; };
 		7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartViewController.swift; sourceTree = "<group>"; };
+		7ECEC3EB2189D4A200B09D00 /* AddZekrFirstPartTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartTextViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,9 @@
 		7E2840FC21873D3A002491E2 /* AlSebha */ = {
 			isa = PBXGroup;
 			children = (
+				7ECEC3E72189D42A00B09D00 /* Delegate */,
+				7ECEC3E62189D3AD00B09D00 /* Controller */,
 				7E2840FD21873D3A002491E2 /* AppDelegate.swift */,
-				7E2840FF21873D3A002491E2 /* HomeViewController.swift */,
-				7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */,
-				7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */,
 				7E28410121873D3B002491E2 /* Main.storyboard */,
 				7E28410721873D41002491E2 /* Assets.xcassets */,
 				7E28410921873D41002491E2 /* LaunchScreen.storyboard */,
@@ -71,6 +72,48 @@
 				7E28410421873D3B002491E2 /* AlSebha.xcdatamodeld */,
 			);
 			path = AlSebha;
+			sourceTree = "<group>";
+		};
+		7ECEC3E62189D3AD00B09D00 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E2840FF21873D3A002491E2 /* HomeViewController.swift */,
+				7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */,
+				7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7ECEC3E72189D42A00B09D00 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7ECEC3EA2189D45D00B09D00 /* AddZekrSecondPartViewController */,
+				7ECEC3E92189D44700B09D00 /* AddZekrFirstPartViewController */,
+				7ECEC3E82189D43E00B09D00 /* HomeViewController */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		7ECEC3E82189D43E00B09D00 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		7ECEC3E92189D44700B09D00 /* AddZekrFirstPartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7ECEC3EB2189D4A200B09D00 /* AddZekrFirstPartTextViewDelegate.swift */,
+			);
+			path = AddZekrFirstPartViewController;
+			sourceTree = "<group>";
+		};
+		7ECEC3EA2189D45D00B09D00 /* AddZekrSecondPartViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddZekrSecondPartViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +189,7 @@
 			files = (
 				7E28410021873D3A002491E2 /* HomeViewController.swift in Sources */,
 				7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */,
+				7ECEC3EC2189D4A300B09D00 /* AddZekrFirstPartTextViewDelegate.swift in Sources */,
 				7E28410621873D3B002491E2 /* AlSebha.xcdatamodeld in Sources */,
 				7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */,
 				7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */,
