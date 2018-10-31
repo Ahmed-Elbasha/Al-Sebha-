@@ -74,6 +74,10 @@ class AddZekrFirstPartViewController: UIViewController {
         }
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        zekrNameTextView.resignFirstResponder()
+    }
+    
     @IBAction func returnButtonPressed(_ sender: Any) {
         print("returnButtonPressed")
         self.dismiss(animated: true, completion: nil)
