@@ -264,7 +264,6 @@
                                         </state>
                                         <connections>
                                             <action selector="nextButtonPressed:" destination="ssy-xw-zWX" eventType="touchUpInside" id="BWA-RY-Fum"/>
-                                            <segue destination="JJb-CN-avf" kind="presentation" id="4tN-mp-xNV"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please enter the desired zekr." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oee-V7-MTy">

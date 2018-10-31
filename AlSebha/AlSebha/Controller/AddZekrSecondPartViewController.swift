@@ -15,11 +15,18 @@ class AddZekrSecondPartViewController: UIViewController {
     @IBOutlet weak var addZekrLabel: UILabel!
     @IBOutlet weak var createZekrButton: UIButton!
     
+    var zekrName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         tasbehTargetTextField.font = UIFont.systemFont(ofSize: 87, weight: .bold)
+        print(zekrName)
+    }
+    
+    func initWithData(zekrName: String) {
+        self.zekrName = zekrName
     }
     
     @IBAction func returnButtonPressed(_ sender: Any) {

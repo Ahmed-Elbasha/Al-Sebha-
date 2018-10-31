@@ -79,11 +79,12 @@ class AddZekrFirstPartViewController: UIViewController {
     }
     
     @IBAction func returnButtonPressed(_ sender: Any) {
-        print("returnButtonPressed")
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        print("nextButtonPressed")
+        let addZekrSecondPartVC = storyboard?.instantiateViewController(withIdentifier: "AddZekrSecondPart") as! AddZekrSecondPartViewController
+        addZekrSecondPartVC.initWithData(zekrName: zekrName)
+        self.present(addZekrSecondPartVC, animated: true, completion: nil)
     }
 }
