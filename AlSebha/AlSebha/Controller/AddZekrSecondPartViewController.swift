@@ -14,6 +14,7 @@ class AddZekrSecondPartViewController: UIViewController {
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var addZekrLabel: UILabel!
     @IBOutlet weak var createZekrButton: UIButton!
+    @IBOutlet weak var enterDesiredTasbehLabel: UILabel!
     
     var zekrName: String = ""
     var isArabic = false
@@ -50,7 +51,31 @@ class AddZekrSecondPartViewController: UIViewController {
             addZekrLabel.text = "اضافة ذكر"
             
             // Set localization for createZekrButton
-            createZekrButton.setTitle("<#T##title: String?##String?#>", for: <#T##UIControl.State#>)
+            createZekrButton.setTitle("انشاء", for: .normal)
+            createZekrButton.setTitle("انشاء", for: .highlighted)
+            
+            // Set localization for enterDesiredTasbehLabel
+            enterDesiredTasbehLabel.text = "من فضلك ادخل عدد مرات التسبيج الذي تريده"
+            
+            // Change isArabic value
+            isArabic = true
+        } else if currentLanguageButtonTitle == "English" && isArabic == true {
+            // Set localization for languageButton
+            languageButton.setTitle("عربي", for: .normal)
+            languageButton.setTitle("عربي", for: .highlighted)
+            
+            // Set localization for addZekrLabel
+            addZekrLabel.text = "Add Zekr"
+            
+            // Set localization for createZekrButton
+            createZekrButton.setTitle("CREATE", for: .normal)
+            createZekrButton.setTitle("CREATE", for: .highlighted)
+            
+            // Set Localization for enterDesiredTasbehLabel
+            enterDesiredTasbehLabel.text = "Please set the desired tasbeh target"
+            
+            // Change isArabic value
+            isArabic = false
         }
     }
     
