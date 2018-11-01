@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E217A24218B1BED0086272B /* AddZekrSecondPartTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E217A23218B1BED0086272B /* AddZekrSecondPartTextFieldDelegate.swift */; };
 		7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2840FD21873D3A002491E2 /* AppDelegate.swift */; };
 		7E28410021873D3A002491E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2840FF21873D3A002491E2 /* HomeViewController.swift */; };
 		7E28410321873D3B002491E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E28410121873D3B002491E2 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E217A23218B1BED0086272B /* AddZekrSecondPartTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartTextFieldDelegate.swift; sourceTree = "<group>"; };
 		7E2840FA21873D3A002491E2 /* AlSebha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlSebha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2840FD21873D3A002491E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E2840FF21873D3A002491E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		7ECEC3EA2189D45D00B09D00 /* AddZekrSecondPartViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7E217A23218B1BED0086272B /* AddZekrSecondPartTextFieldDelegate.swift */,
 			);
 			path = AddZekrSecondPartViewController;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				7EB877592189FCB00096E04B /* UIViewExtension.swift in Sources */,
 				7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */,
 				7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */,
+				7E217A24218B1BED0086272B /* AddZekrSecondPartTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

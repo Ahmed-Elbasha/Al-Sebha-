@@ -18,6 +18,7 @@ class AddZekrSecondPartViewController: UIViewController {
     
     var zekrName: String = ""
     var isArabic = false
+    var desiredTasbehCount: Int32 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,13 @@ class AddZekrSecondPartViewController: UIViewController {
         createZekrButton.bindToKeyboard()
         createZekrButton.deattachFromKeyboard()
         
+        tasbehTargetTextField.delegate = self
+        
         print(zekrName)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        tasbehTargetTextField.resignFirstResponder()
     }
     
     func initWithData(zekrName: String) {
@@ -80,7 +87,6 @@ class AddZekrSecondPartViewController: UIViewController {
     }
     
     @IBAction func createZekrButtonPressed(_ sender: Any) {
-        print("createZekrButtonPressed")
         let homeVC = storyboard?.instantiateViewController(withIdentifier: "Home")
         self.present(homeVC!, animated: true, completion: nil)
     }
