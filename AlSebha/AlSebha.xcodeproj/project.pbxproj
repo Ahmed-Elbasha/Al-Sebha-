@@ -15,6 +15,7 @@
 		7E28410B21873D41002491E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E28410921873D41002491E2 /* LaunchScreen.storyboard */; };
 		7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */; };
 		7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */; };
+		7EB877592189FCB00096E04B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB877582189FCB00096E04B /* UIViewExtension.swift */; };
 		7ECEC3EC2189D4A300B09D00 /* AddZekrFirstPartTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEC3EB2189D4A200B09D00 /* AddZekrFirstPartTextViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		7E28410C21873D41002491E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartViewController.swift; sourceTree = "<group>"; };
 		7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartViewController.swift; sourceTree = "<group>"; };
+		7EB877582189FCB00096E04B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		7ECEC3EB2189D4A200B09D00 /* AddZekrFirstPartTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartTextViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 		7E2840FC21873D3A002491E2 /* AlSebha */ = {
 			isa = PBXGroup;
 			children = (
+				7EB877572189FC880096E04B /* Extension */,
 				7ECEC3E72189D42A00B09D00 /* Delegate */,
 				7ECEC3E62189D3AD00B09D00 /* Controller */,
 				7E2840FD21873D3A002491E2 /* AppDelegate.swift */,
@@ -72,6 +75,14 @@
 				7E28410421873D3B002491E2 /* AlSebha.xcdatamodeld */,
 			);
 			path = AlSebha;
+			sourceTree = "<group>";
+		};
+		7EB877572189FC880096E04B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7EB877582189FCB00096E04B /* UIViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		7ECEC3E62189D3AD00B09D00 /* Controller */ = {
@@ -191,6 +202,7 @@
 				7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */,
 				7ECEC3EC2189D4A300B09D00 /* AddZekrFirstPartTextViewDelegate.swift in Sources */,
 				7E28410621873D3B002491E2 /* AlSebha.xcdatamodeld in Sources */,
+				7EB877592189FCB00096E04B /* UIViewExtension.swift in Sources */,
 				7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */,
 				7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */,
 			);
@@ -339,11 +351,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AlSebha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahmed-Elbasha.AlSebha";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -356,11 +370,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AlSebha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahmed-Elbasha.AlSebha";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

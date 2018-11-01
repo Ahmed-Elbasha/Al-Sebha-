@@ -16,12 +16,17 @@ class AddZekrSecondPartViewController: UIViewController {
     @IBOutlet weak var createZekrButton: UIButton!
     
     var zekrName: String = ""
+    var isArabic = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         tasbehTargetTextField.font = UIFont.systemFont(ofSize: 87, weight: .bold)
+        
+        createZekrButton.bindToKeyboard()
+        createZekrButton.deattachFromKeyboard()
+        
         print(zekrName)
     }
     
@@ -30,12 +35,23 @@ class AddZekrSecondPartViewController: UIViewController {
     }
     
     @IBAction func returnButtonPressed(_ sender: Any) {
-        print("returnButtonPressed")
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func languageButtonPressed(_ sender: Any) {
-        print("languageButtonPressed")
+        let currentLanguageButtonTitle = languageButton.currentTitle
+        
+        if currentLanguageButtonTitle == "عربي" && isArabic == false {
+            // Set localization for languageButton
+            languageButton.setTitle("English", for: .normal)
+            languageButton.setTitle("English", for: .highlighted)
+            
+            // Set localization for addZekrLabel
+            addZekrLabel.text = "اضافة ذكر"
+            
+            // Set localization for createZekrButton
+            createZekrButton.setTitle("<#T##title: String?##String?#>", for: <#T##UIControl.State#>)
+        }
     }
     
     @IBAction func createZekrButtonPressed(_ sender: Any) {

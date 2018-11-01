@@ -22,6 +22,9 @@ class AddZekrFirstPartViewController: UIViewController {
         super.viewDidLoad()
 
         setDelegateForUIControls()
+        
+        //nextButton.bindToKeyboard()
+        //nextButton.deattachFromKeyboard()
     }
     
     func setDelegateForUIControls() {
