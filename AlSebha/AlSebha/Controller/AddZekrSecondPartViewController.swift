@@ -18,6 +18,7 @@ class AddZekrSecondPartViewController: UIViewController {
     @IBOutlet weak var addZekrLabel: UILabel!
     @IBOutlet weak var createZekrButton: UIButton!
     @IBOutlet weak var enterDesiredTasbehLabel: UILabel!
+    @IBOutlet weak var createButtonBottomConstraint: NSLayoutConstraint!
     
     var zekrName: String = ""
     var isArabic = false
@@ -28,6 +29,8 @@ class AddZekrSecondPartViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         tasbehTargetTextField.font = UIFont.systemFont(ofSize: 87, weight: .bold)
+        
+        languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 17)
         
         createZekrButton.bindToKeyboard()
         createZekrButton.deattachFromKeyboard()
@@ -159,6 +162,7 @@ class AddZekrSecondPartViewController: UIViewController {
             // Set localization for languageButton
             languageButton.setTitle("English", for: .normal)
             languageButton.setTitle("English", for: .highlighted)
+            languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 15)
             
             // Set localization for addZekrLabel
             addZekrLabel.text = "اضافة ذكر"
@@ -176,6 +180,7 @@ class AddZekrSecondPartViewController: UIViewController {
             // Set localization for languageButton
             languageButton.setTitle("عربي", for: .normal)
             languageButton.setTitle("عربي", for: .highlighted)
+            languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 17)
             
             // Set localization for addZekrLabel
             addZekrLabel.text = "Add Zekr"

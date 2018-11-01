@@ -44,6 +44,7 @@ extension AddZekrFirstPartViewController: UITextViewDelegate {
         } else if textView.text != "" || textView.text != nil {
             zekrName = textView.text
             textView.resignFirstResponder()
+            nextButtonBottomConstraint.constant = 0.0
             print(zekrName)
         }
     }

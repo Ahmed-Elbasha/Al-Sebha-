@@ -14,6 +14,7 @@ class AddZekrFirstPartViewController: UIViewController {
     @IBOutlet weak var zekrNameTextView: UITextView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addZekrLabel: UILabel!
+    @IBOutlet weak var nextButtonBottomConstraint: NSLayoutConstraint!
     
     var isArabic = false
     var zekrName: String = ""
@@ -23,8 +24,10 @@ class AddZekrFirstPartViewController: UIViewController {
 
         setDelegateForUIControls()
         
-        //nextButton.bindToKeyboard()
-        //nextButton.deattachFromKeyboard()
+        languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 17)
+        
+        nextButton.bindToKeyboard()
+        nextButton.deattachFromKeyboard()
     }
     
     func setDelegateForUIControls() {
@@ -41,6 +44,7 @@ class AddZekrFirstPartViewController: UIViewController {
             // Set localization for languageButton
             languageButton.setTitle("English", for: .normal)
             languageButton.setTitle("English", for: .highlighted)
+            languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 15)
             
             // Set localization for nextButton
             nextButton.setTitle("التالي", for: .normal)
@@ -49,6 +53,8 @@ class AddZekrFirstPartViewController: UIViewController {
             // Set localization for zekrNameTextView
             if zekrNameTextView.text == "Please enter the desired zekr." {
                 zekrNameTextView.text = "من فضلك قم بكتابة الذكر الذي تريد اضافته"
+                zekrNameTextView.textAlignment = .right
+            } else {
                 zekrNameTextView.textAlignment = .right
             }
             
@@ -61,6 +67,7 @@ class AddZekrFirstPartViewController: UIViewController {
             // Set localization for languageButton
             languageButton.setTitle("عربي", for: .normal)
             languageButton.setTitle("عربي", for: .highlighted)
+            languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 17)
             
             // Set localization for nextButton
             nextButton.setTitle("NEXT", for: .normal)
@@ -69,6 +76,8 @@ class AddZekrFirstPartViewController: UIViewController {
             // Set localization for zekrNameTextView
             if zekrNameTextView.text == "من فضلك قم بكتابة الذكر الذي تريد اضافته" {
                 zekrNameTextView.text = "Please enter the desired zekr."
+                zekrNameTextView.textAlignment = .left
+            } else {
                 zekrNameTextView.textAlignment = .left
             }
             
@@ -79,6 +88,7 @@ class AddZekrFirstPartViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         zekrNameTextView.resignFirstResponder()
+        nextButtonBottomConstraint.constant = 0.0
     }
     
     @IBAction func returnButtonPressed(_ sender: Any) {
