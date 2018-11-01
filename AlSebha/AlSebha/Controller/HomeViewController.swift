@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
         sabbehButton.layer.borderColor = cyanColor.cgColor
         sabbehButton.layer.borderWidth = 1
         
+        tasbehCountLabel.font = UIFont.systemFont(ofSize: 87, weight: .bold)
     }
     
     override func viewWillAppear(_ animated: Bool) {

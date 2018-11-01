@@ -127,11 +127,11 @@
                                 <rect key="frame" x="0.0" y="354" width="375" height="313"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YkI-Y3-v57">
-                                        <rect key="frame" x="168.5" y="50" width="38" height="68.5"/>
+                                        <rect key="frame" x="16" y="50" width="343" height="85"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="68.5" id="9Ik-Hh-akc"/>
+                                            <constraint firstAttribute="height" constant="85" id="9Ik-Hh-akc"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="57"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="87"/>
                                         <color key="textColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -159,10 +159,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="YkI-Y3-v57" firstAttribute="centerX" secondItem="lfF-0N-E6c" secondAttribute="centerX" id="7nl-MV-g8K"/>
+                                    <constraint firstItem="YkI-Y3-v57" firstAttribute="leading" secondItem="lfF-0N-E6c" secondAttribute="leading" constant="16" id="Nfw-02-Z7b"/>
                                     <constraint firstItem="bOT-mx-4Yf" firstAttribute="centerX" secondItem="lfF-0N-E6c" secondAttribute="centerX" id="RNZ-38-oPO"/>
                                     <constraint firstItem="CG4-pE-pgR" firstAttribute="centerX" secondItem="lfF-0N-E6c" secondAttribute="centerX" id="YT1-e5-RNr"/>
                                     <constraint firstAttribute="bottom" secondItem="bOT-mx-4Yf" secondAttribute="bottom" constant="8" id="dca-8P-1AG"/>
-                                    <constraint firstItem="CG4-pE-pgR" firstAttribute="top" secondItem="YkI-Y3-v57" secondAttribute="bottom" constant="35" id="tdm-Uw-Wgg"/>
+                                    <constraint firstAttribute="trailing" secondItem="YkI-Y3-v57" secondAttribute="trailing" constant="16" id="eT3-Sa-YnJ"/>
+                                    <constraint firstItem="CG4-pE-pgR" firstAttribute="top" secondItem="YkI-Y3-v57" secondAttribute="bottom" constant="18.5" id="tdm-Uw-Wgg"/>
                                     <constraint firstItem="YkI-Y3-v57" firstAttribute="top" secondItem="lfF-0N-E6c" secondAttribute="top" constant="50" id="uPQ-kj-w1v"/>
                                 </constraints>
                             </view>
@@ -392,7 +394,7 @@
                                             <constraint firstAttribute="height" constant="85" id="OZE-pR-RfO"/>
                                         </constraints>
                                         <color key="textColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="71"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="87"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
