@@ -23,7 +23,11 @@ extension AddZekrFirstPartViewController: UITextViewDelegate {
     }
     
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-        return true
+        if zekrNameTextView.text == "" {
+            return false
+        } else {
+            return true
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {

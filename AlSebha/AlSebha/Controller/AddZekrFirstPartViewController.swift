@@ -86,8 +86,34 @@ class AddZekrFirstPartViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        let addZekrSecondPartVC = storyboard?.instantiateViewController(withIdentifier: "AddZekrSecondPart") as! AddZekrSecondPartViewController
-        addZekrSecondPartVC.initWithData(zekrName: zekrName)
-        self.present(addZekrSecondPartVC, animated: true, completion: nil)
+        if zekrName != "" {
+            let addZekrSecondPartVC = storyboard?.instantiateViewController(withIdentifier: "AddZekrSecondPart") as! AddZekrSecondPartViewController
+            addZekrSecondPartVC.initWithData(zekrName: zekrName)
+            self.present(addZekrSecondPartVC, animated: true, completion: nil)
+        } else {
+            var errorMessageTitle = ""
+            var errorMessage = ""
+            var defaultActionTitle = ""
+            
+            if isArabic == false {
+                errorMessageTitle = "Error"
+                errorMessage = "Please enter a valid name for the zekr."
+                defaultActionTitle = "OK"
+            } else {
+                errorMessageTitle = "خطآ"
+                errorMessage = "من فضلك ادخل اسم صحيح للذكر."
+                defaultActionTitle = "حسنآ"
+            }
+            
+            let alertController = UIAlertController(title: errorMessageTitle, message: errorMessage, preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: defaultActionTitle, style: .default) { (alertAction) in
+                return
+            }
+            
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 }
