@@ -87,12 +87,11 @@
                                             <constraint firstItem="kdX-uI-jAH" firstAttribute="centerY" secondItem="aZQ-Y3-tJs" secondAttribute="centerY" constant="8" id="VvM-7Q-0QF"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aGV-Of-bTw">
-                                        <rect key="frame" x="0.0" y="-4" width="375" height="292"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aGV-Of-bTw">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="285"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="zekrCell" textLabel="59w-Om-mb1" detailTextLabel="ngA-UD-gzR" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="WVo-g8-cHt">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="zekrCell" textLabel="59w-Om-mb1" detailTextLabel="ngA-UD-gzR" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="WVo-g8-cHt" customClass="ZekrCell" customModule="AlSebha" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WVo-g8-cHt" id="Vo4-B3-q0S">
@@ -113,11 +112,11 @@
                                                             <color key="textColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4d-4q-jdv">
-                                                            <rect key="frame" x="0.0" y="-1" width="375" height="70"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4d-4q-jdv">
+                                                            <rect key="frame" x="0.0" y="-10" width="375" height="89.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zekr Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCX-p7-Oje">
-                                                                    <rect key="frame" x="130" y="25" width="114" height="21"/>
+                                                                    <rect key="frame" x="131" y="25" width="113.5" height="39.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -127,12 +126,21 @@
                                                             <constraints>
                                                                 <constraint firstItem="LCX-p7-Oje" firstAttribute="top" secondItem="W4d-4q-jdv" secondAttribute="top" constant="25" id="3OU-5Y-nwU"/>
                                                                 <constraint firstItem="LCX-p7-Oje" firstAttribute="centerY" secondItem="W4d-4q-jdv" secondAttribute="centerY" id="FEX-g7-hy2"/>
-                                                                <constraint firstItem="LCX-p7-Oje" firstAttribute="leading" secondItem="W4d-4q-jdv" secondAttribute="leading" constant="130" id="css-y7-QUR"/>
                                                                 <constraint firstItem="LCX-p7-Oje" firstAttribute="centerX" secondItem="W4d-4q-jdv" secondAttribute="centerX" id="guG-BC-5hK"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="W4d-4q-jdv" firstAttribute="centerY" secondItem="Vo4-B3-q0S" secondAttribute="centerY" id="77S-Qz-j5R"/>
+                                                        <constraint firstItem="W4d-4q-jdv" firstAttribute="top" secondItem="Vo4-B3-q0S" secondAttribute="topMargin" constant="-21" id="Elt-lk-qYW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="W4d-4q-jdv" secondAttribute="trailing" id="K2g-hZ-qS6"/>
+                                                        <constraint firstItem="W4d-4q-jdv" firstAttribute="leading" secondItem="Vo4-B3-q0S" secondAttribute="leading" id="vwG-G4-oKt"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="zekrCompleteLabel" destination="LCX-p7-Oje" id="Sx4-PR-HXj"/>
+                                                    <outlet property="zekrCompleteView" destination="W4d-4q-jdv" id="i8b-8i-wqC"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -140,8 +148,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="aZQ-Y3-tJs" secondAttribute="bottom" constant="-7" id="5Fx-LR-Cbx"/>
+                                    <constraint firstItem="aGV-Of-bTw" firstAttribute="top" secondItem="Sga-0R-oP8" secondAttribute="top" id="8Pl-fA-4lN"/>
                                     <constraint firstItem="aZQ-Y3-tJs" firstAttribute="top" secondItem="Sga-0R-oP8" secondAttribute="top" id="Emd-ua-Iui"/>
                                     <constraint firstAttribute="trailing" secondItem="aZQ-Y3-tJs" secondAttribute="trailing" id="Prd-jQ-uOT"/>
+                                    <constraint firstItem="aGV-Of-bTw" firstAttribute="leading" secondItem="Sga-0R-oP8" secondAttribute="leading" id="eMW-QR-7Xs"/>
+                                    <constraint firstAttribute="trailing" secondItem="aGV-Of-bTw" secondAttribute="trailing" id="phV-Pz-vuo"/>
+                                    <constraint firstAttribute="bottom" secondItem="aGV-Of-bTw" secondAttribute="bottom" id="y2H-dB-uso"/>
                                     <constraint firstItem="aZQ-Y3-tJs" firstAttribute="leading" secondItem="Sga-0R-oP8" secondAttribute="leading" id="yMH-3O-fCO"/>
                                 </constraints>
                             </view>
@@ -214,8 +226,6 @@
                         <outlet property="languageButton" destination="6hO-qk-qer" id="WbI-Gi-TaX"/>
                         <outlet property="sabbehButton" destination="CG4-pE-pgR" id="Q6s-z9-QAF"/>
                         <outlet property="tasbehCountLabel" destination="YkI-Y3-v57" id="qea-rT-soU"/>
-                        <outlet property="zekrCompleteLabel" destination="LCX-p7-Oje" id="MwX-GK-gKc"/>
-                        <outlet property="zekrCompleteView" destination="W4d-4q-jdv" id="9Bi-bx-n7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

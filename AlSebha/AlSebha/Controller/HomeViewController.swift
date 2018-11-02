@@ -18,13 +18,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var emptyStateView: UIView!
     @IBOutlet weak var azkarTableView: UITableView!
     @IBOutlet weak var tasbehCountLabel: UILabel!
-    @IBOutlet weak var zekrCompleteLabel: UILabel!
-    @IBOutlet weak var zekrCompleteView: UIView!
+
     
     
     // MARK Class Attributes
-    let azkar = [Zekr]()
+    var azkar = [Zekr]()
     var isArabic = false
+    var zekrDesiredTasbehCount = 0
+    var zekrName = ""
+    var zekrCurrentProgress = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,12 @@ class HomeViewController: UIViewController {
         setDelegateForUIControls()
         
         tasbehCountLabel.font = UIFont.systemFont(ofSize: 87, weight: .bold)
+        
+        fetchZekrObjectDataFromPersistentStore { (complete) in
+            if complete {
+                self.checkTheCountOfRowsInTableView()
+            }
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -64,6 +72,20 @@ class HomeViewController: UIViewController {
             azkarTableView.isHidden = false
             emptyStateView.isHidden = true
             emptyStateLabel.isHidden = true
+        }
+    }
+    
+    func fetchZekrObjectDataFromPersistentStore(_ handler: @escaping(_ status: Bool) -> ()) {
+        let managedContext = appDelegate?.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<Zekr>(entityName: "Zekr")
+        
+        do {
+            azkar = try (managedContext?.fetch(fetchRequest))!
+            print("For the current time you have: \(azkar.count) Azkar")
+            handler(true)
+        } catch {
+            print("Data fetch failed.")
+            handler(false)
         }
     }
     
