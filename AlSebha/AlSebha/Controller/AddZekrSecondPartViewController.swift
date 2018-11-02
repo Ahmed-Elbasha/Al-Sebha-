@@ -40,6 +40,10 @@ class AddZekrSecondPartViewController: UIViewController {
         print(zekrName)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         tasbehTargetTextField.resignFirstResponder()
     }

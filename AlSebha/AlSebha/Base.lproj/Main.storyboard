@@ -69,30 +69,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-0R-oP8">
                                 <rect key="frame" x="0.0" y="69" width="375" height="285"/>
                                 <subviews>
-                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aGV-Of-bTw">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="292"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="59w-Om-mb1" rowHeight="50" style="IBUITableViewCellStyleDefault" id="WVo-g8-cHt">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WVo-g8-cHt" id="Vo4-B3-q0S">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="59w-Om-mb1">
-                                                            <rect key="frame" x="15" y="0.0" width="345" height="49.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZQ-Y3-tJs">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZQ-Y3-tJs">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="292"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no zekr in the current time press + to add new zekr" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdX-uI-jAH">
@@ -110,16 +87,61 @@
                                             <constraint firstItem="kdX-uI-jAH" firstAttribute="centerY" secondItem="aZQ-Y3-tJs" secondAttribute="centerY" constant="8" id="VvM-7Q-0QF"/>
                                         </constraints>
                                     </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aGV-Of-bTw">
+                                        <rect key="frame" x="0.0" y="-4" width="375" height="292"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="zekrCell" textLabel="59w-Om-mb1" detailTextLabel="ngA-UD-gzR" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="WVo-g8-cHt">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WVo-g8-cHt" id="Vo4-B3-q0S">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="59w-Om-mb1">
+                                                            <rect key="frame" x="15" y="15" width="33.5" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ngA-UD-gzR">
+                                                            <rect key="frame" x="15" y="38.5" width="33" height="14.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.30218410489999997" green="0.67396730179999997" blue="0.91375917200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4d-4q-jdv">
+                                                            <rect key="frame" x="0.0" y="-1" width="375" height="70"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zekr Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCX-p7-Oje">
+                                                                    <rect key="frame" x="130" y="25" width="114" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.30196078431372547" green="0.67396730179999997" blue="0.91375917200000001" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstItem="LCX-p7-Oje" firstAttribute="top" secondItem="W4d-4q-jdv" secondAttribute="top" constant="25" id="3OU-5Y-nwU"/>
+                                                                <constraint firstItem="LCX-p7-Oje" firstAttribute="centerY" secondItem="W4d-4q-jdv" secondAttribute="centerY" id="FEX-g7-hy2"/>
+                                                                <constraint firstItem="LCX-p7-Oje" firstAttribute="leading" secondItem="W4d-4q-jdv" secondAttribute="leading" constant="130" id="css-y7-QUR"/>
+                                                                <constraint firstItem="LCX-p7-Oje" firstAttribute="centerX" secondItem="W4d-4q-jdv" secondAttribute="centerX" id="guG-BC-5hK"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="aZQ-Y3-tJs" firstAttribute="top" secondItem="aGV-Of-bTw" secondAttribute="top" id="50E-rp-fAR"/>
                                     <constraint firstAttribute="bottom" secondItem="aZQ-Y3-tJs" secondAttribute="bottom" constant="-7" id="5Fx-LR-Cbx"/>
                                     <constraint firstItem="aZQ-Y3-tJs" firstAttribute="top" secondItem="Sga-0R-oP8" secondAttribute="top" id="Emd-ua-Iui"/>
-                                    <constraint firstItem="aZQ-Y3-tJs" firstAttribute="bottom" secondItem="aGV-Of-bTw" secondAttribute="bottom" id="PSm-JV-OdX"/>
                                     <constraint firstAttribute="trailing" secondItem="aZQ-Y3-tJs" secondAttribute="trailing" id="Prd-jQ-uOT"/>
-                                    <constraint firstItem="aZQ-Y3-tJs" firstAttribute="leading" secondItem="aGV-Of-bTw" secondAttribute="leading" id="RAn-rm-j5i"/>
-                                    <constraint firstItem="aZQ-Y3-tJs" firstAttribute="trailing" secondItem="aGV-Of-bTw" secondAttribute="trailing" id="rTg-Kb-Gzx"/>
                                     <constraint firstItem="aZQ-Y3-tJs" firstAttribute="leading" secondItem="Sga-0R-oP8" secondAttribute="leading" id="yMH-3O-fCO"/>
                                 </constraints>
                             </view>
@@ -192,11 +214,13 @@
                         <outlet property="languageButton" destination="6hO-qk-qer" id="WbI-Gi-TaX"/>
                         <outlet property="sabbehButton" destination="CG4-pE-pgR" id="Q6s-z9-QAF"/>
                         <outlet property="tasbehCountLabel" destination="YkI-Y3-v57" id="qea-rT-soU"/>
+                        <outlet property="zekrCompleteLabel" destination="LCX-p7-Oje" id="MwX-GK-gKc"/>
+                        <outlet property="zekrCompleteView" destination="W4d-4q-jdv" id="9Bi-bx-n7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="27"/>
+            <point key="canvasLocation" x="45.600000000000001" y="26.53673163418291"/>
         </scene>
         <!--Add Zekr First Part View Controller-->
         <scene sceneID="jYu-m2-8KC">

@@ -11,13 +11,18 @@ import CoreData
 
 class HomeViewController: UIViewController {
 
+    // MARK IBOutlets
     @IBOutlet weak var sabbehButton: UIButton!
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var emptyStateLabel: UILabel!
     @IBOutlet weak var emptyStateView: UIView!
     @IBOutlet weak var azkarTableView: UITableView!
     @IBOutlet weak var tasbehCountLabel: UILabel!
+    @IBOutlet weak var zekrCompleteLabel: UILabel!
+    @IBOutlet weak var zekrCompleteView: UIView!
     
+    
+    // MARK Class Attributes
     let azkar = [Zekr]()
     var isArabic = false
     
@@ -29,13 +34,24 @@ class HomeViewController: UIViewController {
         sabbehButton.layer.borderColor = cyanColor.cgColor
         sabbehButton.layer.borderWidth = 1
         
+        setDelegateForUIControls()
+        
         tasbehCountLabel.font = UIFont.systemFont(ofSize: 87, weight: .bold)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         checkTheCountOfRowsInTableView()
+    }
+    
+    func setDelegateForUIControls() {
+        azkarTableView.delegate = self
+        azkarTableView.dataSource = self
     }
     
     func checkTheCountOfRowsInTableView() {

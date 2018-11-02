@@ -30,6 +30,10 @@ class AddZekrFirstPartViewController: UIViewController {
         nextButton.deattachFromKeyboard()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func setDelegateForUIControls() {
         zekrNameTextView.delegate = self
     }

@@ -16,6 +16,7 @@
 		7E28410B21873D41002491E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E28410921873D41002491E2 /* LaunchScreen.storyboard */; };
 		7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */; };
 		7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */; };
+		7E5D4C4E218C9EEA001058D6 /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4C4D218C9EEA001058D6 /* HomeTableViewDelegate.swift */; };
 		7EB877592189FCB00096E04B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB877582189FCB00096E04B /* UIViewExtension.swift */; };
 		7ECEC3EC2189D4A300B09D00 /* AddZekrFirstPartTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECEC3EB2189D4A200B09D00 /* AddZekrFirstPartTextViewDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		7E28410C21873D41002491E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartViewController.swift; sourceTree = "<group>"; };
 		7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartViewController.swift; sourceTree = "<group>"; };
+		7E5D4C4D218C9EEA001058D6 /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		7EB877582189FCB00096E04B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		7ECEC3EB2189D4A200B09D00 /* AddZekrFirstPartTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartTextViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 		7ECEC3E82189D43E00B09D00 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7E5D4C4D218C9EEA001058D6 /* HomeTableViewDelegate.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */,
 				7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */,
 				7E217A24218B1BED0086272B /* AddZekrSecondPartTextFieldDelegate.swift in Sources */,
+				7E5D4C4E218C9EEA001058D6 /* HomeTableViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
