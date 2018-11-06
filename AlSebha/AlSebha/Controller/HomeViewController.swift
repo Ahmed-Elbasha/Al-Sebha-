@@ -20,13 +20,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tasbehCountLabel: UILabel!
 
     
-    
     // MARK Class Attributes
     var azkar = [Zekr]()
     var isArabic = false
     var zekrDesiredTasbehCount = 0
     var zekrName = ""
     var zekrCurrentProgress = 0
+    var currentZekr: Zekr!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +89,29 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func updateTheCurentZekrTasbehProgress(zekr: Zekr, _ handler: @escaping(_ status: Bool) ->() ) {
+        let managedContext = appDelegate?.persistentContainer.viewContext
+        let currentSelectedZekr = zekr
+        if currentSelectedZekr.tasbehTarget > currentSelectedZekr.tasbehProgess {
+            if let currentTasbehProgress = Int32(tasbehCountLabel.text!) {
+                currentSelectedZekr.setValue(currentTasbehProgress + 1, forKey: "tasbehProgess")
+                
+                do {
+                    try managedContext?.save()
+                    print("Tasbeh current progress: \(currentTasbehProgress)")
+                    handler(true)
+                    tasbehCountLabel.text = "\(currentSelectedZekr.tasbehProgess)"
+                } catch {
+                    print("\(error.localizedDescription)")
+                    handler(false)
+                }
+            }
+        } else {
+            handler(false)
+            return
+        }
+    }
+    
     @IBAction func addZekrButtonPressed(_ sender: Any) {
         let addZekrFirstPartVC = storyboard?.instantiateViewController(withIdentifier: "AddZekrFirstPart")
         self.present(addZekrFirstPartVC!, animated: true, completion: nil)
@@ -133,6 +156,13 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func sabbehButtonPressed(_ sender: Any) {
+        self.updateTheCurentZekrTasbehProgress(zekr: currentZekr!) { (complete) in
+            if complete {
+                self.azkarTableView.reloadData()
+            } else {
+                return
+            }
+        }
     }
 }
 
