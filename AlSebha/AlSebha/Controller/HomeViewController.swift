@@ -40,11 +40,7 @@ class HomeViewController: UIViewController {
         
         tasbehCountLabel.font = UIFont.systemFont(ofSize: 87, weight: .bold)
         
-        fetchZekrObjectDataFromPersistentStore { (complete) in
-            if complete {
-                self.checkTheCountOfRowsInTableView()
-            }
-        }
+        self.fetchAzkarObjects()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -109,6 +105,27 @@ class HomeViewController: UIViewController {
         } else {
             handler(false)
             return
+        }
+    }
+    
+    func fetchAzkarObjects() {
+        fetchZekrObjectDataFromPersistentStore { (complete) in
+            if complete {
+                self.checkTheCountOfRowsInTableView()
+            }
+        }
+    }
+    
+    func deleteZekr(atIndexPath indexPath: IndexPath) {
+        let managedContext = appDelegate?.persistentContainer.viewContext
+        
+        managedContext?.delete(azkar[indexPath.row])
+        
+        do {
+            try managedContext?.save()
+            self.azkarTableView.reloadData()
+        } catch {
+            print("removing zekr failed. \(error.localizedDescription)")
         }
     }
     
