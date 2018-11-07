@@ -123,7 +123,6 @@ class HomeViewController: UIViewController {
         
         do {
             try managedContext?.save()
-            self.azkarTableView.reloadData()
         } catch {
             print("removing zekr failed. \(error.localizedDescription)")
         }

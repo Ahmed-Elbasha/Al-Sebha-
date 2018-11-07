@@ -64,8 +64,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.deleteZekr(atIndexPath: indexPath)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
             self.azkar.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
             self.fetchAzkarObjects()
         }
     }
