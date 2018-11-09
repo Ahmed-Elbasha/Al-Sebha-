@@ -10,89 +10,44 @@ import UIKit
 
 class AddZekrFirstPartViewController: UIViewController {
 
+    // MARK: IBOutlets
     @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var zekrNameTextView: UITextView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var addZekrLabel: UILabel!
-    @IBOutlet weak var nextButtonBottomConstraint: NSLayoutConstraint!
     
+    
+    // MARK: Class Attributes
     var isArabic = false
     var zekrName: String = ""
     
+    
+    // MARK: ViewController Life Cycle Methods.
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setDelegateForUIControls()
+        // Set delegate for zekrNameTextView
+        self.setDelegateForUIControls()
         
-        languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 17)
+        // Set the font of titleLabel
+        self.setTitleLabelFont()
         
-        nextButton.bindToKeyboard()
-        nextButton.deattachFromKeyboard()
+        // Set observers for sabbehButton
+        self.setObserversForSabbehButton()
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
     
-    func setDelegateForUIControls() {
-        zekrNameTextView.delegate = self
-    }
-
+    // MARK: IBActions
     @IBAction func languageButtonPressed(_ sender: Any) {
+        // Get the current title for the language button
         let currentLanguageButton = languageButton.currentTitle
         
+        // Set Localization for UI Controls
         if currentLanguageButton == "عربي" && isArabic == false {
-            // Set localization for addZekrLabel
-            addZekrLabel.text = "آضافة ذكر"
-            
-            // Set localization for languageButton
-            languageButton.setTitle("English", for: .normal)
-            languageButton.setTitle("English", for: .highlighted)
-            languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 15)
-            
-            // Set localization for nextButton
-            nextButton.setTitle("التالي", for: .normal)
-            nextButton.setTitle("التالي", for: .highlighted)
-            
-            // Set localization for zekrNameTextView
-            if zekrNameTextView.text == "Please enter the desired zekr." {
-                zekrNameTextView.text = "من فضلك قم بكتابة الذكر الذي تريد اضافته"
-                zekrNameTextView.textAlignment = .right
-            } else {
-                zekrNameTextView.textAlignment = .right
-            }
-            
-            // Change isArabic value.
-            isArabic = true
+            self.setLocalizationForUIControlsToArabic()
         } else if currentLanguageButton == "English" && isArabic == true {
-            // Set localization for addZekrLabel
-            addZekrLabel.text = "Add Zekr"
-            
-            // Set localization for languageButton
-            languageButton.setTitle("عربي", for: .normal)
-            languageButton.setTitle("عربي", for: .highlighted)
-            languageButton.titleLabel?.font = UIFont(name: "Avenir Next Regular", size: 17)
-            
-            // Set localization for nextButton
-            nextButton.setTitle("NEXT", for: .normal)
-            nextButton.setTitle("NEXT", for: .highlighted)
-            
-            // Set localization for zekrNameTextView
-            if zekrNameTextView.text == "من فضلك قم بكتابة الذكر الذي تريد اضافته" {
-                zekrNameTextView.text = "Please enter the desired zekr."
-                zekrNameTextView.textAlignment = .left
-            } else {
-                zekrNameTextView.textAlignment = .left
-            }
-            
-            // Change isArabic value
-            isArabic = false
+            self.setLocalizationForUIControlsToEnglish()
         }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        zekrNameTextView.resignFirstResponder()
-        nextButtonBottomConstraint.constant = 0.0
     }
     
     @IBAction func returnButtonPressed(_ sender: Any) {
@@ -100,34 +55,23 @@ class AddZekrFirstPartViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        if zekrName != "" {
+        // If zekrNameTextView text property have a value
+        if zekrNameTextView.text != "من فضلك قم بكتابة الذكر الذي تريد اضافته" || zekrNameTextView.text != "Please enter the desired zekr."  {
+            zekrName = zekrNameTextView.text
+            
+            // Resign first responder for zekrNameTextView
+            zekrNameTextView.resignFirstResponder()
+            
+            // Create addZekrSecondPartViewController object
             let addZekrSecondPartVC = storyboard?.instantiateViewController(withIdentifier: "AddZekrSecondPart") as! AddZekrSecondPartViewController
+            
+            // Pass zekrName value to the next ViewController
             addZekrSecondPartVC.initWithData(zekrName: zekrName)
+            
+            // Show addZekrSecondPartViewController
             self.present(addZekrSecondPartVC, animated: true, completion: nil)
         } else {
-            var errorMessageTitle = ""
-            var errorMessage = ""
-            var defaultActionTitle = ""
-            
-            if isArabic == false {
-                errorMessageTitle = "Error"
-                errorMessage = "Please enter a valid name for the zekr."
-                defaultActionTitle = "OK"
-            } else {
-                errorMessageTitle = "خطآ"
-                errorMessage = "من فضلك ادخل اسم صحيح للذكر."
-                defaultActionTitle = "حسنآ"
-            }
-            
-            let alertController = UIAlertController(title: errorMessageTitle, message: errorMessage, preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: defaultActionTitle, style: .default) { (alertAction) in
-                return
-            }
-            
-            alertController.addAction(defaultAction)
-            
-            self.present(alertController, animated: true, completion: nil)
+            self.showErrorAlertController()
         }
     }
 }

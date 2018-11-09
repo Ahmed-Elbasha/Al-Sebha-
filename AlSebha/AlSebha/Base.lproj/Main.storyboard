@@ -338,7 +338,6 @@
                         <outlet property="addZekrLabel" destination="5zt-DY-RFV" id="OOl-BG-JvO"/>
                         <outlet property="languageButton" destination="GtN-JL-7yR" id="ccJ-wM-jUk"/>
                         <outlet property="nextButton" destination="l9z-Fm-P8K" id="4do-kG-Xdt"/>
-                        <outlet property="nextButtonBottomConstraint" destination="9a8-fU-PSk" id="YuM-H7-kwf"/>
                         <outlet property="zekrNameTextView" destination="Oee-V7-MTy" id="v5b-5a-8TS"/>
                     </connections>
                 </viewController>

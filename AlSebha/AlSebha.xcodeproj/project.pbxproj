@@ -19,6 +19,10 @@
 		7E28410621873D3B002491E2 /* AlSebha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E28410421873D3B002491E2 /* AlSebha.xcdatamodeld */; };
 		7E28410821873D41002491E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E28410721873D41002491E2 /* Assets.xcassets */; };
 		7E28410B21873D41002491E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E28410921873D41002491E2 /* LaunchScreen.storyboard */; };
+		7E2DE1B42195F60E00A693FF /* AddZekrFirstPartUIVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1B32195F60E00A693FF /* AddZekrFirstPartUIVisualization.swift */; };
+		7E2DE1B62195F70000A693FF /* AddZekrFirstPartDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1B52195F70000A693FF /* AddZekrFirstPartDelegation.swift */; };
+		7E2DE1B82195F77000A693FF /* AddZekrFirstPartLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1B72195F77000A693FF /* AddZekrFirstPartLocalization.swift */; };
+		7E2DE1BA2195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1B92195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift */; };
 		7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */; };
 		7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */; };
 		7E5D4C4E218C9EEA001058D6 /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4C4D218C9EEA001058D6 /* HomeTableViewDelegate.swift */; };
@@ -42,6 +46,10 @@
 		7E28410721873D41002491E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E28410A21873D41002491E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E28410C21873D41002491E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E2DE1B32195F60E00A693FF /* AddZekrFirstPartUIVisualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartUIVisualization.swift; sourceTree = "<group>"; };
+		7E2DE1B52195F70000A693FF /* AddZekrFirstPartDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartDelegation.swift; sourceTree = "<group>"; };
+		7E2DE1B72195F77000A693FF /* AddZekrFirstPartLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartLocalization.swift; sourceTree = "<group>"; };
+		7E2DE1B92195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartUIAlertControllerPresentation.swift; sourceTree = "<group>"; };
 		7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartViewController.swift; sourceTree = "<group>"; };
 		7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartViewController.swift; sourceTree = "<group>"; };
 		7E5D4C4D218C9EEA001058D6 /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +79,14 @@
 				7E27A16E219390CE001C3B8A /* Localization.swift */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		7E27A17021939667001C3B8A /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7EB877582189FCB00096E04B /* UIViewExtension.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		7E2840F121873D3A002491E2 = {
@@ -106,11 +122,23 @@
 			path = AlSebha;
 			sourceTree = "<group>";
 		};
+		7E4BA43F2194D45600872359 /* AddZekrFirstPartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E2DE1B32195F60E00A693FF /* AddZekrFirstPartUIVisualization.swift */,
+				7E2DE1B52195F70000A693FF /* AddZekrFirstPartDelegation.swift */,
+				7E2DE1B72195F77000A693FF /* AddZekrFirstPartLocalization.swift */,
+				7E2DE1B92195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift */,
+			);
+			path = AddZekrFirstPartViewController;
+			sourceTree = "<group>";
+		};
 		7EB877572189FC880096E04B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7E4BA43F2194D45600872359 /* AddZekrFirstPartViewController */,
+				7E27A17021939667001C3B8A /* UIView */,
 				7E27A16521938DDF001C3B8A /* HomeViewController */,
-				7EB877582189FCB00096E04B /* UIViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -230,13 +258,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2DE1B82195F77000A693FF /* AddZekrFirstPartLocalization.swift in Sources */,
+				7E2DE1B42195F60E00A693FF /* AddZekrFirstPartUIVisualization.swift in Sources */,
 				7E28410021873D3A002491E2 /* HomeViewController.swift in Sources */,
 				7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */,
 				7ECEC3EC2189D4A300B09D00 /* AddZekrFirstPartTextViewDelegate.swift in Sources */,
 				7E5D4C50218CA4E5001058D6 /* ZekrCell.swift in Sources */,
 				7E28410621873D3B002491E2 /* AlSebha.xcdatamodeld in Sources */,
 				7EB877592189FCB00096E04B /* UIViewExtension.swift in Sources */,
+				7E2DE1BA2195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift in Sources */,
 				7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */,
+				7E2DE1B62195F70000A693FF /* AddZekrFirstPartDelegation.swift in Sources */,
 				7E27A16B21938EF4001C3B8A /* CoreDataOperations.swift in Sources */,
 				7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */,
 				7E27A16D21939008001C3B8A /* Navigation.swift in Sources */,
