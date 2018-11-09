@@ -31,7 +31,6 @@ extension AddZekrSecondPartViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         desiredTasbehCount = Int32(textField.text!) ?? 0
         createButtonBottomConstraint.constant = 0
-        print(String(describing: desiredTasbehCount))
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

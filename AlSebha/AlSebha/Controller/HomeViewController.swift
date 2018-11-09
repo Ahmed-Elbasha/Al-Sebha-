@@ -45,10 +45,6 @@ class HomeViewController: UIViewController {
         self.fetchAzkarObjects()
     }
     
-    // MARK: Change the style of the StatusBar
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

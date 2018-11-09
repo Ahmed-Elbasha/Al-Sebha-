@@ -23,6 +23,12 @@
 		7E2DE1B62195F70000A693FF /* AddZekrFirstPartDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1B52195F70000A693FF /* AddZekrFirstPartDelegation.swift */; };
 		7E2DE1B82195F77000A693FF /* AddZekrFirstPartLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1B72195F77000A693FF /* AddZekrFirstPartLocalization.swift */; };
 		7E2DE1BA2195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1B92195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift */; };
+		7E2DE1BD2196240300A693FF /* AddZekrSecondPartDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1BC2196240300A693FF /* AddZekrSecondPartDelegation.swift */; };
+		7E2DE1BF2196248D00A693FF /* AddZekrSecondPartUIVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1BE2196248D00A693FF /* AddZekrSecondPartUIVisualization.swift */; };
+		7E2DE1C12196251700A693FF /* AddZekrSecondPartUIAlertControllerPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1C02196251700A693FF /* AddZekrSecondPartUIAlertControllerPresentation.swift */; };
+		7E2DE1C32196257F00A693FF /* AddZekrSecondPartCoreDataOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1C22196257F00A693FF /* AddZekrSecondPartCoreDataOperations.swift */; };
+		7E2DE1C52196263800A693FF /* AddZekrSecondPartLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1C42196263800A693FF /* AddZekrSecondPartLocalization.swift */; };
+		7E2DE1C7219626DF00A693FF /* AddZekrSecondPartNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2DE1C6219626DF00A693FF /* AddZekrSecondPartNavigation.swift */; };
 		7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */; };
 		7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */; };
 		7E5D4C4E218C9EEA001058D6 /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D4C4D218C9EEA001058D6 /* HomeTableViewDelegate.swift */; };
@@ -50,6 +56,12 @@
 		7E2DE1B52195F70000A693FF /* AddZekrFirstPartDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartDelegation.swift; sourceTree = "<group>"; };
 		7E2DE1B72195F77000A693FF /* AddZekrFirstPartLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartLocalization.swift; sourceTree = "<group>"; };
 		7E2DE1B92195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartUIAlertControllerPresentation.swift; sourceTree = "<group>"; };
+		7E2DE1BC2196240300A693FF /* AddZekrSecondPartDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartDelegation.swift; sourceTree = "<group>"; };
+		7E2DE1BE2196248D00A693FF /* AddZekrSecondPartUIVisualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartUIVisualization.swift; sourceTree = "<group>"; };
+		7E2DE1C02196251700A693FF /* AddZekrSecondPartUIAlertControllerPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartUIAlertControllerPresentation.swift; sourceTree = "<group>"; };
+		7E2DE1C22196257F00A693FF /* AddZekrSecondPartCoreDataOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartCoreDataOperations.swift; sourceTree = "<group>"; };
+		7E2DE1C42196263800A693FF /* AddZekrSecondPartLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartLocalization.swift; sourceTree = "<group>"; };
+		7E2DE1C6219626DF00A693FF /* AddZekrSecondPartNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartNavigation.swift; sourceTree = "<group>"; };
 		7E331B9621886B6E00435B4B /* AddZekrFirstPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrFirstPartViewController.swift; sourceTree = "<group>"; };
 		7E331B982188729F00435B4B /* AddZekrSecondPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddZekrSecondPartViewController.swift; sourceTree = "<group>"; };
 		7E5D4C4D218C9EEA001058D6 /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +134,19 @@
 			path = AlSebha;
 			sourceTree = "<group>";
 		};
+		7E2DE1BB219623DF00A693FF /* AddZekrSecondPartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E2DE1BC2196240300A693FF /* AddZekrSecondPartDelegation.swift */,
+				7E2DE1BE2196248D00A693FF /* AddZekrSecondPartUIVisualization.swift */,
+				7E2DE1C02196251700A693FF /* AddZekrSecondPartUIAlertControllerPresentation.swift */,
+				7E2DE1C22196257F00A693FF /* AddZekrSecondPartCoreDataOperations.swift */,
+				7E2DE1C42196263800A693FF /* AddZekrSecondPartLocalization.swift */,
+				7E2DE1C6219626DF00A693FF /* AddZekrSecondPartNavigation.swift */,
+			);
+			path = AddZekrSecondPartViewController;
+			sourceTree = "<group>";
+		};
 		7E4BA43F2194D45600872359 /* AddZekrFirstPartViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +161,7 @@
 		7EB877572189FC880096E04B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7E2DE1BB219623DF00A693FF /* AddZekrSecondPartViewController */,
 				7E4BA43F2194D45600872359 /* AddZekrFirstPartViewController */,
 				7E27A17021939667001C3B8A /* UIView */,
 				7E27A16521938DDF001C3B8A /* HomeViewController */,
@@ -156,9 +182,9 @@
 		7ECEC3E72189D42A00B09D00 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				7ECEC3EA2189D45D00B09D00 /* AddZekrSecondPartViewController */,
-				7ECEC3E92189D44700B09D00 /* AddZekrFirstPartViewController */,
 				7ECEC3E82189D43E00B09D00 /* HomeViewController */,
+				7ECEC3E92189D44700B09D00 /* AddZekrFirstPartViewController */,
+				7ECEC3EA2189D45D00B09D00 /* AddZekrSecondPartViewController */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -264,17 +290,23 @@
 				7E331B992188729F00435B4B /* AddZekrSecondPartViewController.swift in Sources */,
 				7ECEC3EC2189D4A300B09D00 /* AddZekrFirstPartTextViewDelegate.swift in Sources */,
 				7E5D4C50218CA4E5001058D6 /* ZekrCell.swift in Sources */,
+				7E2DE1C7219626DF00A693FF /* AddZekrSecondPartNavigation.swift in Sources */,
 				7E28410621873D3B002491E2 /* AlSebha.xcdatamodeld in Sources */,
+				7E2DE1C52196263800A693FF /* AddZekrSecondPartLocalization.swift in Sources */,
 				7EB877592189FCB00096E04B /* UIViewExtension.swift in Sources */,
+				7E2DE1BD2196240300A693FF /* AddZekrSecondPartDelegation.swift in Sources */,
 				7E2DE1BA2195F86100A693FF /* AddZekrFirstPartUIAlertControllerPresentation.swift in Sources */,
 				7E331B9721886B6E00435B4B /* AddZekrFirstPartViewController.swift in Sources */,
 				7E2DE1B62195F70000A693FF /* AddZekrFirstPartDelegation.swift in Sources */,
 				7E27A16B21938EF4001C3B8A /* CoreDataOperations.swift in Sources */,
 				7E2840FE21873D3A002491E2 /* AppDelegate.swift in Sources */,
+				7E2DE1BF2196248D00A693FF /* AddZekrSecondPartUIVisualization.swift in Sources */,
+				7E2DE1C32196257F00A693FF /* AddZekrSecondPartCoreDataOperations.swift in Sources */,
 				7E27A16D21939008001C3B8A /* Navigation.swift in Sources */,
 				7E27A16921938E7C001C3B8A /* UIVisualization.swift in Sources */,
 				7E27A16F219390CE001C3B8A /* Localization.swift in Sources */,
 				7E217A24218B1BED0086272B /* AddZekrSecondPartTextFieldDelegate.swift in Sources */,
+				7E2DE1C12196251700A693FF /* AddZekrSecondPartUIAlertControllerPresentation.swift in Sources */,
 				7E27A16721938E17001C3B8A /* Delegation.swift in Sources */,
 				7E5D4C4E218C9EEA001058D6 /* HomeTableViewDelegate.swift in Sources */,
 			);

@@ -46,4 +46,9 @@ extension HomeViewController {
         // Set the font size of tasbehCountLabel
         tasbehCountLabel.font = UIFont.systemFont(ofSize: 87, weight: .bold)
     }
+    
+    // MARK: Change the style of the StatusBar
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
