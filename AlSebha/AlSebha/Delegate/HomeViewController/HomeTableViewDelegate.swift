@@ -29,7 +29,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.detailTextLabel?.textAlignment = .left
                 
                 // Change the semanticContentAttribute of the cell to force left to right.
-                cell.semanticContentAttribute = .forceLeftToRight
+                cell.semanticContentAttribute = .forceRightToLeft
             } else {
                 // Change the text alignment of text label to right
                 cell.textLabel?.textAlignment = .right

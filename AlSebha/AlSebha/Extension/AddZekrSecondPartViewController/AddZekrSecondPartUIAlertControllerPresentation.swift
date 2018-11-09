@@ -111,7 +111,7 @@ extension AddZekrSecondPartViewController {
         
         let confirmAction = UIAlertAction(title: confirmActionTitle, style: .destructive) { (alertAction) in
             // Save Zekr object into persistent store.
-            
+            self.saveZekrObject()
         }
         
         confirmationAlertController.addAction(confirmAction)

@@ -41,7 +41,7 @@ extension HomeViewController {
     
     func setLocalizationForUIControlsToArabic() {
         // Set localization for sabbehButton
-        self.setLocalizationForUIControlsToArabic()
+        self.setLocalizationForSabbehButtonToArabic()
         
         // Set localization for languageButton
         self.setLocalizationForLanguageButtonToArabic()
