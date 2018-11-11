@@ -97,6 +97,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             self.azkar.remove(at: indexPath.row)
             // Delete the selected row from the tableView
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            tasbehCountLabel.text = "0"
             // Fetch all the currently stored Zekr objects from persistent store
             self.fetchAzkarObjects()
         }
