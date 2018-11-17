@@ -22,30 +22,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         // If currentZekr value is not nil
         if let currentZekr = azkar[indexPath.row] as? Zekr {
             if isArabic == false {
-                // Change the text alignment of text label to left
-                cell.textLabel?.textAlignment = .left
-                
                 // Change the text alignment detail text label alignment to left
-                cell.detailTextLabel?.textAlignment = .left
+                cell.numberOfTimesLabel?.textAlignment = .left
                 
-                // Change the semanticContentAttribute of the cell to force left to right.
-                cell.semanticContentAttribute = .forceRightToLeft
+                // Set the value of text property of numberOfTimesLabel
+                cell.numberOfTimesLabel.text = "\(currentZekr.tasbehTarget) Times."
             } else {
-                // Change the text alignment of text label to right
-                cell.textLabel?.textAlignment = .right
-                
                 // Change the text alignment of detail text label to right
-                cell.detailTextLabel?.textAlignment = .right
+                cell.numberOfTimesLabel?.textAlignment = .right
                 
-                // Change the semanticContentAttribute of the cell to force right to left.
-                cell.semanticContentAttribute = .forceRightToLeft
+                // Set the value of text property of numberOfTimesLabel
+                cell.numberOfTimesLabel.text = "\(currentZekr.tasbehTarget) مرات."
             }
             
             // Set the value of text property of textLabel
-            cell.textLabel?.text = currentZekr.zekrName
-            
-            // Set the value of text property of detailTextLabel
-            cell.detailTextLabel?.text = String(describing: currentZekr.tasbehTarget)
+            cell.zekrNameLabel?.text = currentZekr.zekrName
             
             // If the tasbeh target of the current zekr is lower than or equal to
             // the tasbeh progress

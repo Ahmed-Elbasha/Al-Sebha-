@@ -12,6 +12,8 @@ class ZekrCell: UITableViewCell {
 
     @IBOutlet weak var zekrCompleteView: UIView!
     @IBOutlet weak var zekrCompleteLabel: UILabel!
+    @IBOutlet weak var zekrNameLabel: UILabel!
+    @IBOutlet weak var numberOfTimesLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
